@@ -1,10 +1,13 @@
-db.a.serie.de.tiempo <- function(data_base, tipo.variable='pp', conf.especificas=NULL){
+db.a.serie.de.tiempo <- function(data_base, tipo.variable='pp', conf.especificas=NULL, serie.de.tiempo=TRUE){
   
   if(tipo.variable=='pp'){ message('Preparando la db para precipitacion') } else(
                           message('Preparando la db para temperatura') )
-  # data_base <- db1
-  # conf.especificas=NULL
   
+  # data_base <- base_de_datos2
+  # tipo.variable <- variable
+  # serie.de.tiempo <- FALSE
+  # conf.especificas <- NULL
+  # 
     anho_mes.i <- unique(data_base$anho_mes)
     
     # observado ----
@@ -71,6 +74,7 @@ db.a.serie.de.tiempo <- function(data_base, tipo.variable='pp', conf.especificas
     mes.f <- as.numeric(format(data_base5$Date.y[numero.de.filas], '%m'))
     
     matriz <- as.matrix(data_base5[,c(2:26)])
+    db.con.fechas <- data_base5[,c(1:26)]
     
     conf.1.al.24 <- c(0:24)
     conf.especificas.i <- which(conf.1.al.24%in%conf.especificas)
@@ -82,5 +86,6 @@ db.a.serie.de.tiempo <- function(data_base, tipo.variable='pp', conf.especificas
     
     message('Listo')
     
-  return(series.de.tiempo)
+    if(serie.de.tiempo==TRUE){return(series.de.tiempo)} else(return(db.con.fechas))
+    
 }

@@ -100,8 +100,8 @@ diagrama.de.Taylor.modificado.2 <- function (R.i, sd.ref.i, sd.model.i, add = FA
       }
       points(sd.r, 0, cex = tamanho.punto.de.referencia)
       text(cos(c(bigtickangles, acos(c(0.95, 0.99)))) * 
-             1.03 * maxsd, sin(c(bigtickangles, acos(c(0.95, 
-                                                       0.99)))) * 1.03 * maxsd, c(seq(0.1, 0.9, by = 0.1), 
+             1.05 * maxsd, sin(c(bigtickangles, acos(c(0.95, 
+                                                       0.99)))) * 1.05 * maxsd, c(seq(0.1, 0.9, by = 0.1), 
                                                                                   0.95, 0.99), cex = cex.axis)
       text(maxsd * 0.8, maxsd * 0.8, "Correlation", srt = 315, 
            cex = cex.axis)

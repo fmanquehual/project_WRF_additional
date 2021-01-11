@@ -1,5 +1,3 @@
-
-# library(stringr)
 library(stringi)
 
 bias.de.conf.segun.estacion <- function(db_diagrama_Taylor, db_con_variable_de_interes, numero_columna, umbral_porcentaje_de_coincidencia=50){

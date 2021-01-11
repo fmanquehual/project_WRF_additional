@@ -1,5 +1,5 @@
 preparacion.db.para.serie.de.tiempo <- function(data_base, anho_para_filtro=NULL){
-  # data_base <- db.pp
+  # data_base <- base_de_datos
   
   colnames(data_base)[1] <- 'Date'
   data_base[,1] <- as.character(data_base[,1])

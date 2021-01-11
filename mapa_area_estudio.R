@@ -75,7 +75,8 @@ etiquetas <- function(archivo_shapefile, etiquetas.i, tamanho_etiquetas, color_e
 wgs84 <- '+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0'
 
 # lectura de coberturas ----
-setwd('/home/msomos/Documentos/WRF/coberturas/coberturas_ok/')
+# setwd('/home/msomos/Documentos/WRF/coberturas/coberturas_ok/')
+setwd('C:/Users/Usuario/Documents/Francisco/WRF/coberturas/coberturas_ok/')
 
 marco <- readOGR('.', 'marco_area_estudio')
 marco.grande <- readOGR('.', 'marco_area_estudio_grande')
@@ -91,7 +92,8 @@ g <- readOGR('.', 'polygon_glaciares_chile_argentina_clip')
 g.grande <- readOGR('.', 'polygon_glaciares_chile_argentina_dissolve_geo')
 est <- readOGR('.', 'estaciones_metereologicas')
 
-setwd('/home/msomos/Documentos/WRF/coberturas/export/')
+# setwd('/home/msomos/Documentos/WRF/coberturas/export/')
+setwd('C:/Users/Usuario/Documents/Francisco/WRF/coberturas/export/')
 
 cuenca <- readOGR('.', 'polygon_cuenca_baker_grass_geo')
 ocean.sud <- readOGR('.', 'polygon_oceano__sudamerica_geo')
@@ -113,7 +115,7 @@ lon.i <- axes.map('lon', dem)
 x.e1 <- -71.76
 y.e1 <- -47.96
 
-setwd('/home/msomos/Escritorio/')
+# setwd('/home/msomos/Escritorio/')
 
 plot(dem, col=col.i, axes=FALSE, breaks=breaks.i)# legend=FALSE
 axis(1, at=lon.i$value, labels=lon.i$sufijo, cex.axis = 0.8, las = 1, padj = -1.5)

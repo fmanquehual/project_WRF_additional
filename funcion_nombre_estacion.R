@@ -7,6 +7,7 @@ nombre_estacion <- function(nombre_del_archivo){
   ej6 <- gsub('\\.', '', ej5)
   ej7 <- gsub('Lord', '', ej6)
   ej8 <- gsub('2017', '', ej7)
+  ej9 <- gsub('2010', '', ej8)
   
-  return(ej8)
+  return(ej9)
 }
